@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import reducer from "./reducer";
 import data from "./data";
@@ -22,8 +19,6 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
 
-  // const navigateu = useNavigate()
-
   const [user, setUser] = useState("");
   const [psw, setPsw] = useState("");
 
@@ -37,7 +32,9 @@ const AppProvider = ({ children }) => {
       if (user.length > 0) {
         navigateu("/");
       }
+
       setUser("");
+      useNavigate('/')
     }
   };
   const [users, setUsers] = useState(getStore("users"));
