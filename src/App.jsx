@@ -20,9 +20,11 @@ function App() {
       <Carts />
       <RouterProvider router={router}/>
 
-      <button onClick={() => clearCart()}>clealAll</button>
-
       <p>total price { total}</p>
+      <button onClick={() => clearCart()}>clealAll</button>
+      <br />
+      <h2>hello</h2>
+
         
     </>
   )
